@@ -1,4 +1,4 @@
-package org.superbiz.moviefun;
+package org.superbiz.moviefun.cfsupport;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,8 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.Objects;
 
-public class ServiceCredentials {
 
+public class ServiceCredentials {
     private final String vcapServices;
 
     public ServiceCredentials(String vcapServices) {
@@ -33,6 +33,6 @@ public class ServiceCredentials {
             }
         }
 
-        throw new IllegalStateException("No "+ serviceName + " found in VCAP_SERVICES");
+        throw new IllegalStateException("No " + serviceName + " found in VCAP_SERVICES");
     }
 }

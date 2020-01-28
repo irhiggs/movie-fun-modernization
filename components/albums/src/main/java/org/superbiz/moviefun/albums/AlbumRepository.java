@@ -24,7 +24,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 @Repository
-public class AlbumsBean {
+public class AlbumRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
