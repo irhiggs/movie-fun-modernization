@@ -14,7 +14,7 @@ public class AlbumRestController {
     }
 
     @PostMapping
-    public void addAlbum(Album album) {
+    public void addAlbum(@RequestBody Album album) {
         albumRepository.addAlbum(album);
     }
 

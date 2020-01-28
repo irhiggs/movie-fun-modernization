@@ -1,0 +1,34 @@
+applications:
+  - name: album-service
+    path: applications/album-service/build/libs/album-service.war
+    routes:
+      - route: album-service-isaac-higgins.apps.evans.pal.pivotal.io
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.+ } }'
+    services:
+      - album-database
+      - photo-storage
+  - name: movie-service
+    path: applications/movie-service/build/libs/movie-service.war
+    routes:
+      - route: movie-service-isaac-higgins.apps.evans.pal.pivotal.io
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.+ } }'
+    services:
+      - movie-database
+  - name: movie-fun-app
+    path: applications/movie-fun-app/build/libs/movie-fun-app.war
+    routes:
+      - route: movie-fun-app-isaac-higgins.apps.evans.pal.pivotal.io
+    memory: 1G
+    instances: 1
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 1.8.+ } }'
+      ALBUMS_URL: http://album-service-isaac-higgins.apps.evans.pal.pivotal.io
+      MOVIES_URL: http://movie-service-isaac-higgins.apps.evans.pal.pivotal.io/movies
+    services:
+      - photo-storage

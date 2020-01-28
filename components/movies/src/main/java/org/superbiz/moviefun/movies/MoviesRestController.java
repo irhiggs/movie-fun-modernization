@@ -6,11 +6,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/movies")
-public class MoviesController {
+public class MoviesRestController {
 
     private MoviesRepository moviesRepository;
 
-    public MoviesController(MoviesRepository moviesRepository) {
+    public MoviesRestController(MoviesRepository moviesRepository) {
         this.moviesRepository = moviesRepository;
     }
 
