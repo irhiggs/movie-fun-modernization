@@ -10,7 +10,6 @@ description = "OpenEJB :: Web Examples :: Moviefun"
 
 dependencies {
     compile project(":components:albums")
-    compile project(":components:blobstore")
     compile project(":components:movie-fun-api")
 
     compile "org.springframework.boot:spring-boot-starter-web"

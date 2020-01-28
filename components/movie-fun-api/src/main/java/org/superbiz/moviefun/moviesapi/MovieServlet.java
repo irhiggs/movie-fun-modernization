@@ -74,7 +74,7 @@ public class MovieServlet extends HttpServlet {
 
             String[] ids = request.getParameterValues("id");
             for (String id : ids) {
-                moviesClient.deleteMovieId(new Long(id));
+                moviesClient.deleteMovieId(Long.valueOf(id));
             }
 
             response.sendRedirect("moviefun");
