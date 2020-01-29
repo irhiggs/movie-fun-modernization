@@ -12,6 +12,8 @@ spring:
       max-idle: 4
       min-idle: 4
       initial-size: 4
+  application:
+    name: album-service
 
 logging.level:
   root: WARN
