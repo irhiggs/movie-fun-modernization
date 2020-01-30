@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.superbiz.cloudfoundry.ServiceCredentials;
 import org.superbiz.moviefun.blobstore.BlobStore;
@@ -15,6 +16,7 @@ import org.superbiz.moviefun.blobstore.S3Store;
 import org.superbiz.moviefun.moviesapi.MovieServlet;
 
 @EnableEurekaClient
+@EnableHystrix
 @SpringBootApplication
 public class Application {
 
